@@ -18,7 +18,7 @@ export default function MinicikKartlar() {
               <Card className="flex flex-col justify-between bg-gradient-to-r from-indigo-500 to-blue-500">
                 <CardHeader className="flex flex-col items-center justify-between space-y-0 pb-2">
                     <Folder className="text-amber-300 size-10" />
-                  <CardTitle className="text-md font-medium text-center">İş Listesinde Bekleyen Başvurular</CardTitle>
+                  <CardTitle className=" font-medium text-center">İş Listesinde Bekleyen Başvurular</CardTitle>
                   
                 </CardHeader>
                 <CardContent>
@@ -30,7 +30,7 @@ export default function MinicikKartlar() {
               <Card className="flex flex-col justify-between bg-gradient-to-r from-emerald-400 to-cyan-400">
                 <CardHeader className="flex flex-col items-center justify-between space-y-0 pb-2 w-full">
                     <RefreshCcwDot className="text-amber-600 size-10" />
-                  <CardTitle className="text-md font-medium text-center w-full">G.İ. Başkanlığı Güncelleme Bekleyen </CardTitle>
+                  <CardTitle className=" font-medium text-center w-full whitespace-nowrap">G.İ. Başkanlığı Güncelleme Bekleyen </CardTitle>
                   
                 </CardHeader>
                 <CardContent>
@@ -42,7 +42,7 @@ export default function MinicikKartlar() {
               <Card className="flex flex-col justify-between bg-gradient-to-r from-pink-500 to-rose-500">
                 <CardHeader className="flex flex-col items-center justify-between space-y-0 pb-2">
                     <ClockAlert className="text-blue-500 size-10" />
-                  <CardTitle className="text-md font-medium text-center">Güncelleme Bekleyen Başvuru Sayısı</CardTitle>
+                  <CardTitle className=" font-medium text-center w-full whitespace-nowrap">Güncelleme Bekleyen Başvuru Sayısı</CardTitle>
                   
                 </CardHeader>
                 <CardContent>
@@ -54,7 +54,7 @@ export default function MinicikKartlar() {
               <Card className="flex flex-col justify-between bg-gradient-to-r from-fuchsia-600 to-pink-600">
                 <CardHeader className="flex flex-col items-center justify-between space-y-0 pb-2">
                     <ClockArrowDown className="text-fuchsia-500 size-10" />
-                  <CardTitle className="text-md font-medium text-center">Güncelleme Gelen Başvuru Sayısı</CardTitle>
+                  <CardTitle className=" font-medium text-center">Güncelleme Gelen Başvuru Sayısı</CardTitle>
                   
                 </CardHeader>
                 <CardContent>
@@ -66,7 +66,7 @@ export default function MinicikKartlar() {
               <Card className="flex flex-col justify-between bg-gradient-to-r from-blue-800 to-indigo-900">
                 <CardHeader className="flex flex-col items-center justify-between space-y-0 pb-2">
                     <Maximize2 className="text-cyan-500 size-10" />
-                  <CardTitle className="text-md font-medium text-center">Yurt Dışı Harç Bekleyen</CardTitle>
+                  <CardTitle className=" font-medium text-center">Yurt Dışı Harç Bekleyen</CardTitle>
                   
                 </CardHeader>
                 <CardContent>
@@ -78,7 +78,7 @@ export default function MinicikKartlar() {
               <Card className="flex flex-col justify-between bg-gradient-to-r from-slate-300 to-slate-500">
                 <CardHeader className="flex flex-col items-center justify-between space-y-0 pb-2">
                     <Hourglass className="text-red-500 size-10" />
-                  <CardTitle className="text-md font-medium text-center">Yasal Süresi Geçen Başvurular</CardTitle>
+                  <CardTitle className=" font-medium text-center">Yasal Süresi Geçen Başvurular</CardTitle>
                   
                 </CardHeader>
                 <CardContent>
