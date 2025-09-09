@@ -1,30 +1,30 @@
 import Duyurular from "@/components/duyurular";
-import MinicikKartlar from "@/components/minicik-kart";
-
+import Linkler from "@/components/linkler";
+import MinicikKartV2 from "@/components/minicik-kart-v2";
 import React from "react";
 
-const HomePage = () => {
+const page = () => {
   return (
-    <>
-      <div className="flex flex-col gap-4">
+    <main className="flex-1 p-8 bg-gray-50">
+      <div className="flex items-center justify-between mb-6">
         <div>
-    <h1 className="w-full text-center text-3xl font-bold">
+          <h1 className="text-2xl font-semibold text-gray-900 text-center">
+            Uzman Dashboard - V1
+          </h1>
+        </div>
+      </div>
 
-        Uzman Dashboard - V1
-    </h1>
-        </div>
-        <div className="gridgap-4 lg:grid-cols-4">
-          <MinicikKartlar />
-        </div>
-        <div className="aspect-video rounded-xl">
+      <MinicikKartV2 />
+      <div className="grid grid-cols-3 gap-4 ">
+        <div className="col-span-2 w-full">
           <Duyurular />
         </div>
-        <div className="bg-muted/50 aspect-video rounded-xl" />
-        <div className="bg-muted/50 aspect-video rounded-xl" />
+        <div className="col-span-1 w-full ">
+          <Linkler />
+        </div>
       </div>
-      <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
-    </>
+    </main>
   );
 };
 
-export default HomePage;
+export default page;
