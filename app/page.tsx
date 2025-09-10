@@ -2,31 +2,35 @@ import Duyurular from "@/components/duyurular";
 import EskiBasvuruTablo from "@/components/eski-basvuru-tablo";
 import Linkler from "@/components/linkler";
 import MinicikKartV2 from "@/components/minicik-kart-v2";
+import Notlar from "@/components/notlar";
 import React from "react";
 
 const page = () => {
   return (
-    <main className="flex-1 p-8 bg-gray-50">
-      <div className="flex items-center justify-between mb-6">
+    <main className="flex-1 p-1 bg-gray-50">
+      <div className="flex items-center justify-between ">
         <div>
-          <h1 className="text-2xl font-semibold text-gray-900 text-center">
+          <h1 className="text-xl font-semibold text-gray-900 text-center">
             Uzman Dashboard - V1
           </h1>
         </div>
       </div>
 
       <MinicikKartV2 />
-      <div className="grid grid-cols-3 xl:grid-cols-4 gap-4 ">
-        <div className="col-span-2 xl:col-span-3 w-full">
+
+      <div className="grid grid-cols-1 grid-rows-2 lg:grid-cols-4  gap-3   ">
+        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1  w-full">
+          <EskiBasvuruTablo />
+        </div>
+
+        <div className="lg:col-span-2 lg:col-start-3 lg:row-start-1  w-full">
           <Duyurular />
         </div>
-        <div className="col-span-1 w-full ">
-          <Linkler />
+        <div className="lg:col-span-1 lg:col-start-1 lg:row-start-2   w-full ">
+          <Notlar />
         </div>
-      </div>
-      <div className="grid grid-cols-3 xl:grid-cols-4 gap-4 ">
-        <div className="col-span-2 xl:col-span-3 w-full">
-          <EskiBasvuruTablo />
+        <div className="lg:col-span-1 lg:col-start-2 lg:row-start-2 w-full ">
+          <Linkler />
         </div>
       </div>
     </main>

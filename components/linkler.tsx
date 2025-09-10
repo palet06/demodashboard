@@ -19,24 +19,24 @@ const Linkler = () => {
   return (
     <div className="w-full">
       <div className="">
-        <Card className="h-[400px] gap-2 pb-0">
+        <Card className="h-[360px] gap-2 pb-0">
           <CardHeader className="">
             <CardTitle >
               Hızlı Linkler
             </CardTitle>
             <CardDescription>
-              Kurum içi yardımcı linklere buradan ulaşabilirsiniz
+             
             </CardDescription>
           </CardHeader>
-          <CardContent className="px-4">
+          <CardContent className="px-2">
             <div className="space-y-0">
               {links.map((link, index) => (
                 <div
                   key={index}
-                  className="cursor-pointer flex items-center gap-3 p-3 hover:bg-gray-50 border-b border-gray-100 last:border-b-0"
+                  className="cursor-pointer flex items-center gap-3 p-2 hover:bg-gray-50 border-b border-gray-100 last:border-b-0"
                 >
                   <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                  <div className="flex-1 min-w-0">
+                  <div className="flex-1 min-w-0 p-0">
                     <div className="font-medium text-sm text-gray-900 truncate">
                       <Link href={link.url} target="_blank">{link.name} </Link>
                     </div>

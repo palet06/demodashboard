@@ -119,8 +119,8 @@ const Duyurular = () => {
 
   return (
     <div className="w-full">
-      <div className="grid grid-cols-3 gap-1  ">
-        <Card className="col-span-3 h-[400px] gap-2 pb-0 ">
+      <div className="grid grid-cols-2 gap-1  ">
+        <Card className="col-span-2 h-[400px] gap-2 pb-0 ">
           <CardHeader>
             <CardTitle>Duyurular</CardTitle>
             <CardDescription>
