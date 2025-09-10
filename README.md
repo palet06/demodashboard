@@ -1,3 +1,8 @@
+npm config set ca=""
+set NODE_TLS_REJECT_UNAUTHORIZED=0
+npm config set strict-ssl false
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

@@ -9,7 +9,7 @@ const MinicikKartV2 = () => {
             
 
             {/* Quick Action Cards */}
-            <div className="grid grid-cols-3 gap-4 mb-8">
+            <div className="grid grid-cols-3 xl:grid-cols-4 gap-4 mb-8">
               <Card className="p-6 hover:shadow-md transition-shadow cursor-pointer border-gray-200">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
@@ -76,6 +76,7 @@ const MinicikKartV2 = () => {
                   </div>
                 </div>
               </Card>
+            
              
 
               

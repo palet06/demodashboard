@@ -6,14 +6,15 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Link from "next/link";
 
 const Linkler = () => {
   const links = [
-    { name: "UİGM Portal", url: "https://deneme.com" },
-    { name: "Warehouse", url: "https://deneme.com" },
-    { name: "Çalışma ve Sosyal Güvenlik Bakanlığı", url: "https://deneme.com" },
-    { name: "Personel Portal", url: "https://deneme.com" },
-    { name: "Telefon Rehberi", url: "https://deneme.com" },
+    { name: "UİGM Portal", url: "https://uigmportal.csgb.gov.tr" },
+    { name: "Warehouse", url: "https://warehouseapp.csgb.gov.tr" },
+    { name: "Çalışma ve Sosyal Güvenlik Bakanlığı", url: "https://www.csgb.gov.tr" },
+    { name: "Personel Portal", url: "https://personelportal.csgb.gov.tr" },
+    { name: "Telefon Rehberi", url: "https://kurumici.csgb.gov.tr" },
   ];
   return (
     <div className="w-full">
@@ -27,7 +28,7 @@ const Linkler = () => {
               Kurum içi yardımcı linklere buradan ulaşabilirsiniz
             </CardDescription>
           </CardHeader>
-          <CardContent className="p-0">
+          <CardContent className="px-4">
             <div className="space-y-0">
               {links.map((link, index) => (
                 <div
@@ -37,7 +38,7 @@ const Linkler = () => {
                   <div className="w-2 h-2 rounded-full bg-green-500"></div>
                   <div className="flex-1 min-w-0">
                     <div className="font-medium text-sm text-gray-900 truncate">
-                      {link.name}
+                      <Link href={link.url} target="_blank">{link.name} </Link>
                     </div>
                     <div className="text-xs text-gray-600">{link.url}</div>
                   </div>
