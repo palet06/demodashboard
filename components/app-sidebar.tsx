@@ -37,13 +37,13 @@ const data = {
   navMain: [
     {
       title: "Uzman Dashboard",
-      url: "#",
+      url: "/",
       icon: SquareTerminal,
       isActive: true,
       items: [
         {
           title: "V2",
-          url: "#",
+          url: "uzman-v2",
         },
         {
           title: "V3",

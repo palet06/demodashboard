@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -26,6 +27,7 @@ const priorityColors = {
 };
 
 export default function Notlar() {
+    const pathname = usePathname();
   const [notes, setNotes] = useState<Note[]>([]);
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
   const [isDetailDialogOpen, setIsDetailDialogOpen] = useState(false);
@@ -133,8 +135,10 @@ export default function Notlar() {
     return date.toLocaleDateString("tr-TR", { day: "numeric", month: "short" });
   };
 
+  const standartYukseklik = "h-[340px]" 
   return (
-    <div className="bg-white dark:bg-[#0F0F12] rounded-xl p-6 border border-gray-200 dark:border-[#1F1F23] h-[340px] flex flex-col shadow-sm ">
+    <div className={`bg-white dark:bg-[#0F0F12] rounded-xl p-6 border border-gray-200 dark:border-[#1F1F23] ${pathname ==="/uzman-v2"?'h-full':standartYukseklik}
+  flex flex-col shadow-sm`}>
       <div className="flex items-center justify-between mb-4">
         <h3 className="font-semibold text-gray-900 dark:text-white">
           Notlarım
@@ -225,9 +229,9 @@ export default function Notlar() {
       </div>
 
       <div className="flex flex-col justify-between h-full overflow-y-auto">
-        <div className="space-y-3  flex flex-col w-full  ">
+        <div className="space-y-3  flex flex-col w-full  h-full">
         {notes.length === 0 ? (
-          <div className="text-center py-8">
+          <div className="text-center py-8 flex flex-col h-full items-center justify-center">
             <StickyNote className="h-12 w-12 text-gray-400 mx-auto mb-3" />
             <p className="text-gray-500 dark:text-gray-400">
               Henüz not eklenmemiş

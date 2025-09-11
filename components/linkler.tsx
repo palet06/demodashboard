@@ -1,3 +1,5 @@
+"use client"
+import { usePathname } from "next/navigation";
 import React from "react";
 import {
   Card,
@@ -8,7 +10,11 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 
+
+  //const standartYukseklik = "h-[340px]"
+
 const Linkler = () => {
+//  const pathname = usePathname();
   const links = [
     { name: "UİGM Portal", url: "https://uigmportal.csgb.gov.tr" },
     { name: "Warehouse", url: "https://warehouseapp.csgb.gov.tr" },
@@ -18,8 +24,8 @@ const Linkler = () => {
   ];
   return (
     <div className="w-full">
-      <div className="">
-        <Card className="h-[340px] gap-2 pb-0">
+      <div className="h-full">
+        <Card className={`h-[340px] gap-2 pb-0`}>
           <CardHeader className="">
             <CardTitle >
               Hızlı Linkler
@@ -28,7 +34,7 @@ const Linkler = () => {
              
             </CardDescription>
           </CardHeader>
-          <CardContent className="px-2">
+          <CardContent className="px-2 flex h-full">
             <div className="space-y-0">
               {links.map((link, index) => (
                 <div
@@ -37,7 +43,7 @@ const Linkler = () => {
                 >
                   <div className="w-2 h-2 rounded-full bg-green-500"></div>
                   <div className="flex-1 min-w-0 p-0">
-                    <div className="font-medium text-sm text-gray-900 truncate">
+                    <div className="font-medium text-xs lg:text-md whitespace-break-spaces text-gray-900 truncate">
                       <Link href={link.url} target="_blank">{link.name} </Link>
                     </div>
                     <div className="text-xs text-gray-600">{link.url}</div>

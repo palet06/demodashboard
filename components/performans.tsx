@@ -129,9 +129,9 @@ const mobileChartOptions = {
 
 export default function Performans() {
   return (
-    <div className="grid grid-cols-1 gap-1 h-[340px]">
+    <div className="grid grid-cols-1 gap-1 h-[340px] ">
       {/* Content Performance Chart */}
-      <div className="bg-white dark:bg-[#0F0F12] rounded-xl p-3 sm:p-6 border border-gray-200 dark:border-[#1F1F23] w-full min-w-0 h-[340px]">
+      <div className="bg-white dark:bg-[#0F0F12] rounded-xl p-3 sm:p-6 border border-gray-200 dark:border-[#1F1F23] w-full min-w-0 h-[340px] shadow-sm">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2 ">
           <h3 className="font-semibold text-gray-900 dark:text-white">Performans Grafiği</h3>
           <select className="text-xs sm:text-sm border border-gray-200 dark:border-gray-700 rounded-md px-2 py-1 bg-white dark:bg-gray-800 text-gray-900 dark:text-white w-full sm:w-auto">
@@ -141,7 +141,7 @@ export default function Performans() {
           </select>
         </div>
         <div className="h-64  w-full">
-          <Line data={contentData} options={window.innerWidth < 640 ? mobileChartOptions : chartOptions} />
+          <Line data={contentData} options={ chartOptions} />
         </div>
       </div>
 
