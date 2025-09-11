@@ -136,7 +136,7 @@ export default function Notlar() {
   return (
     <div className="bg-white dark:bg-[#0F0F12] rounded-xl p-6 border border-gray-200 dark:border-[#1F1F23] h-[340px] flex flex-col shadow-sm ">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+        <h3 className="font-semibold text-gray-900 dark:text-white">
           Notlarım
         </h3>
 

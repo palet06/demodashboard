@@ -101,7 +101,7 @@ const EskiBasvuruTablo = () => {
                         <th className="text-left py-3 px-4 text-xs font-medium text-muted-foreground  ">
                           Son İşlem Adımı
                         </th>
-                        <th className="text-center py-3 px-4 text-xs font-medium text-muted-foreground ">
+                        <th className="text-center py-3 px-4 text-xs font-medium text-muted-foreground  whitespace-nowrap">
                           Değerlendirmede Geçen Gün
                         </th>
                       </tr>

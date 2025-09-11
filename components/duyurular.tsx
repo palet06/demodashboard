@@ -124,7 +124,7 @@ const Duyurular = () => {
           <CardHeader>
             <CardTitle>Duyurular</CardTitle>
             <CardDescription>
-              Sistem duyuruları ve diğer duyurular
+              
             </CardDescription>
           </CardHeader>
           <CardContent className="pl-2 pb-0  ">
