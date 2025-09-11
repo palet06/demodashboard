@@ -117,7 +117,7 @@ const EskiBasvuruTablo = () => {
                           </td>
                           <td className="py-3 px-4">
                             <div className="min-w-0">
-                              <div className="text-sm  text-slate-100 bg-muted-foreground leading-tight rounded-sm text-center">
+                              <div className="text-sm  text-slate-100 bg-muted-foreground rounded-sm text-center">
                                 {basvuru.basvuruNo}
                               </div>
                             </div>

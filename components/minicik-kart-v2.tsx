@@ -6,13 +6,13 @@ const MinicikKartV2 = () => {
   return (
     <div className="mb-4">
       {/* Quick Action Cards */}
-      <div className="grid grid-cols-3 lg:grid-cols-4 gap-4 mb-1">
+      <div className="grid grid-cols-3 lg:grid-cols-4 gap-10 mb-1">
         <Card className="p-6 hover:shadow-md transition-shadow cursor-pointer border-gray-200">
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-              <h1 className="w-6 h-6 text-green-600 font-bold flex items-center justify-center">
+                <h1 className="w-6 h-6 text-green-600 font-bold flex items-center justify-center">
                 190
-              </h1>
+                </h1>
             </div>
             <div>
               <h3 className="font-medium text-gray-900">

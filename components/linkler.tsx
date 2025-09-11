@@ -19,7 +19,7 @@ const Linkler = () => {
   return (
     <div className="w-full">
       <div className="">
-        <Card className="h-[360px] gap-2 pb-0">
+        <Card className="h-[340px] gap-2 pb-0">
           <CardHeader className="">
             <CardTitle >
               Hızlı Linkler
