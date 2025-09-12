@@ -118,7 +118,7 @@ const Duyurular = () => {
   };
 
   return (
-    <div className="w-full">
+    <div id="duyurular" className="w-full">
       <div className="grid grid-cols-2 gap-1  ">
         <Card className="col-span-2 h-[400px] gap-2 pb-0 ">
           <CardHeader>

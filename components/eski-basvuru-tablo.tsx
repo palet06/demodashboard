@@ -76,7 +76,7 @@ const basvurular = [
 
 const EskiBasvuruTablo = () => {
   return (
-    <div className="w-full ">
+    <div id="son20" className="w-full bg-white">
       <div className="grid grid-cols-1 gap-1  ">
         <Card className="col-span-1 h-[400px] gap-2 pb-0 ">
           <CardHeader>

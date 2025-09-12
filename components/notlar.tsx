@@ -146,8 +146,8 @@ export default function Notlar() {
 
         <Dialog open={isAddDialogOpen} onOpenChange={setIsAddDialogOpen}>
           <DialogTrigger className="cursor-pointer" asChild>
-            <button className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">
-              <Plus className="h-4 w-4 text-gray-600 dark:text-gray-400" />
+            <button className="p-2 bg-green-200 hover:bg-green-300 dark:hover:bg-gray-800 rounded-lg transition-colors">
+              <Plus className="h-5 w-5  text-gray-600 dark:text-gray-400" />
             </button>
           </DialogTrigger>
           <DialogContent className="sm:max-w-md">

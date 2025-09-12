@@ -15,6 +15,7 @@ import MinicikKartUzman from "@/components/minicik-kart-uzman";
 
 const page = () => {
   return (
+    <div className="flex min-h-screen flex-col">
     
     <main className="flex-1 p-1 bg-gray-50 ">
       <div className="flex items-center justify-between mb-5 text-center w-full">
@@ -85,6 +86,7 @@ const page = () => {
         </div>
       </div>
     </main>
+    </div>
   );
 };
 
