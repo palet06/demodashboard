@@ -19,14 +19,14 @@ const contentData = {
   datasets: [
     {
       label: "Atanan Başvurular",
-      data: [1000, 700, 800, 1120, 1300, 1600, 1800],
+      data: [1000, 1100, 1200, 1050, 1300, 1400, 1450,1555,1477,1600,1700,1800],
       borderColor: "rgb(59, 130, 246)",
       backgroundColor: "rgba(59, 130, 246, 0.1)",
       tension: 0.4,
     },
     {
       label: "Değerlendirilen Başvurular",
-      data: [890, 600, 790, 1000, 1250, 1390, 1650],
+      data: [890, 900, 1000, 900, 1150, 1300, 1100,1250,1199,1300,1400,1300],
       borderColor: "rgb(16, 185, 129)",
       backgroundColor: "rgba(16, 185, 129, 0.1)",
       tension: 0.4,
@@ -88,44 +88,7 @@ const chartOptions = {
   },
 }
 
-const mobileChartOptions = {
-  ...chartOptions,
-  plugins: {
-    ...chartOptions.plugins,
-    legend: {
-      ...chartOptions.plugins.legend,
-      labels: {
-        ...chartOptions.plugins.legend.labels,
-        padding: 10,
-        font: {
-          size: 10,
-        },
-      },
-    },
-  },
-  scales: {
-    ...chartOptions.scales,
-    y: {
-      ...chartOptions.scales.y,
-      ticks: {
-        font: {
-          size: 9,
-        },
-        maxTicksLimit: 6,
-      },
-    },
-    x: {
-      ...chartOptions.scales.x,
-      ticks: {
-        font: {
-          size: 9,
-        },
-        maxRotation: 45,
-        minRotation: 0,
-      },
-    },
-  },
-}
+
 
 export default function Performans() {
   return (

@@ -1,11 +1,9 @@
-import Duyurular from "@/components/duyurular";
-import EskiBasvuruTablo from "@/components/eski-basvuru-tablo";
+
 import Kutucuklar from "@/components/kutucuklar";
 
-import Linkler from "@/components/linkler";
-import Notlar from "@/components/notlar";
+
 import OzetBilgileriParent from "@/components/ozet-bilgileri-parent";
-import Performans from "@/components/performans";
+
 import React from "react";
 
 const page = () => {
@@ -31,14 +29,7 @@ const page = () => {
       </div>
         <Kutucuklar />
         <OzetBilgileriParent />
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
-          {/* <SalaryRangeAnalytics />
-          <RetentionTurnoverAnalytics /> */}
-        </div>
-        {/* <AnalyticInsightsReport />
-        <AgeRangeAnalytics />
-        <AdOnPhSalaryDetails />
-        <BpoComparisonTable /> */}
+       
       </main>
     </div>
   );

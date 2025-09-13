@@ -37,7 +37,7 @@ export function cn(...inputs: ClassValue[]) {
   return originalStyles;
 }
 
- function restoreStyles(originalStyles) {
+async function restoreStyles(originalStyles) {
   originalStyles.forEach((styles, element) => {
     if (styles.color) element.style.color = styles.color;
     if (styles.backgroundColor) element.style.backgroundColor = styles.backgroundColor;
@@ -65,7 +65,7 @@ export const generatePDF = async (elementId: string, filename = "report.pdf"): P
       scale: 2, // daha yüksek çözünürlük
     });
 
-    restoreStyles(originalStyles);
+    await restoreStyles(originalStyles);
     const imgData = canvas.toDataURL('image/png');
     const pdf = new jsPDF('p', 'mm', 'a4');
 

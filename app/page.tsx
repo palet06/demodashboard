@@ -1,3 +1,4 @@
+
 import Duyurular from "@/components/duyurular";
 import EskiBasvuruTablo from "@/components/eski-basvuru-tablo";
 
