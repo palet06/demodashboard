@@ -13,6 +13,7 @@ import Performans from "./performans"
 import EskiBasvuruTablo from "./eski-basvuru-tablo"
 import Notlar from "./notlar"
 import Link from "next/link"
+import Harita from "./Harita"
 
 
 
@@ -81,7 +82,7 @@ export default function OzetBilgileriParent() {
         <Tabs defaultValue="duyurular">
           <TabsList className="grid w-full grid-cols-5">
             <TabsTrigger className="cursor-pointer" value="duyurular">Duyurular</TabsTrigger>
-            <TabsTrigger className="cursor-pointer" value="performans">Performans Grafiğiniz</TabsTrigger>
+            <TabsTrigger className="cursor-pointer" value="harita">İzin Haritası</TabsTrigger>
             <TabsTrigger className="cursor-pointer" value="bekleyen20">Bekleyen Son 20 Başvuru</TabsTrigger>
             <TabsTrigger className="cursor-pointer" value="notlar">Notlarım</TabsTrigger>
             <TabsTrigger className="cursor-pointer" value="linkler">Yararlı Linkler</TabsTrigger>
@@ -92,8 +93,8 @@ export default function OzetBilgileriParent() {
             
           </TabsContent>
 
-          <TabsContent value="performans" className="space-y-4 pt-4">
-            <Performans />
+          <TabsContent value="harita" className="space-y-4 pt-4">
+            <Harita />
           </TabsContent>
 
           <TabsContent value="bekleyen20" className="space-y-4 pt-4">
