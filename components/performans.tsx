@@ -10,7 +10,9 @@ import {
   Legend,
   BarElement,
 } from "chart.js"
-import { Line, Bar } from "react-chartjs-2"
+import { Line } from "react-chartjs-2"
+
+
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, BarElement)
 
@@ -90,9 +92,12 @@ const chartOptions = {
 
 
 
+
+
 export default function Performans() {
+
   return (
-    <div id="performans" className="grid grid-cols-1 gap-1 h-[340px] ">
+    <div id="performans" className={`grid grid-cols-1 gap-1 h-[340px] `}>
       {/* Content Performance Chart */}
       <div className="bg-white dark:bg-[#0F0F12] rounded-xl p-3 sm:p-6 border border-gray-200 dark:border-[#1F1F23] w-full min-w-0 h-[340px] shadow-sm">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2 ">

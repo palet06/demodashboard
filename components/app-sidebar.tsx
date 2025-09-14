@@ -43,11 +43,11 @@ const data = {
       items: [
         {
           title: "V2",
-          url: "uzman-v2",
+          url: "/uzman-v2",
         },
         {
           title: "V3",
-          url: "#",
+          url: "/uzman-v3",
         },
       
       ],
@@ -59,11 +59,11 @@ const data = {
       items: [
         {
           title: "V1",
-          url: "#",
+          url: "/sm-v1",
         },
         {
           title: "V2",
-          url: "#",
+          url: "/sm-v2",
         },
        
       ],
@@ -75,11 +75,11 @@ const data = {
       items: [
         {
           title: "V1",
-          url: "#",
+          url: "/db-v1",
         },
         {
           title: "V2",
-          url: "#",
+          url: "/db-v2",
         },
         
       ],
@@ -91,11 +91,11 @@ const data = {
       items: [
         {
           title: "V1",
-          url: "#",
+          url: "/gm-v1",
         },
         {
           title: "V2",
-          url: "#",
+          url: "/gm-v2",
         },
        
       ],
