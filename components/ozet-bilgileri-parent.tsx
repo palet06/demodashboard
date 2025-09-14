@@ -15,7 +15,7 @@ import EskiBasvuruTablo from "./eski-basvuru-tablo";
 import Notlar from "./notlar";
 import Link from "next/link";
 import Harita from "./Harita";
-
+import BaskanlikOzet from "./baskanlik-ozet";
 
 export default function OzetBilgileriParent() {
   const pathname = usePathname();
@@ -47,6 +47,7 @@ export default function OzetBilgileriParent() {
     }
   };
 
+  
   return (
     <Card className="col-span-2">
       <CardHeader className="">
@@ -92,7 +93,7 @@ export default function OzetBilgileriParent() {
       </CardHeader>
       <CardContent className="">
         <Tabs defaultValue="duyurular">
-          <TabsList className="grid w-full grid-cols-5">
+          <TabsList className={`grid w-full ${pathname.startsWith("/uzman")?'grid-cols-5':'grid-cols-6'} `}>
             <TabsTrigger className="cursor-pointer" value="duyurular">
               Duyurular
             </TabsTrigger>
@@ -101,16 +102,18 @@ export default function OzetBilgileriParent() {
               <TabsTrigger className="cursor-pointer" value="performans">
                 Performansım
               </TabsTrigger>
-            )} 
-            {
-              pathname.startsWith("/db") && (
-                 <TabsTrigger className="cursor-pointer" value="harita">
-              İzin Haritası
-            </TabsTrigger>
-              )
+            )}
+            {pathname.startsWith("/db") && (
+              <>
+              <TabsTrigger className="cursor-pointer" value="harita">
+                İzin Haritası
+              </TabsTrigger>
+              <TabsTrigger className="cursor-pointer" value="baskanlikOzet">
+                Başkanlık Özet
+              </TabsTrigger>
+              </>
+            )}
 
-            }
-           
             <TabsTrigger className="cursor-pointer" value="bekleyen20">
               Bekleyen Son 20 Başvuru
             </TabsTrigger>
@@ -127,20 +130,20 @@ export default function OzetBilgileriParent() {
           </TabsContent>
 
           {pathname === "/uzman-v3" && (
-              <TabsContent value="performans" className="space-y-4 pt-4">
-            <Performans />
-          </TabsContent>
-            )} 
-            {
-              pathname.startsWith("/db") && (
-                 <TabsContent value="harita" className="space-y-4 pt-4">
-            <Harita />
-          </TabsContent>
-              )
-
-            }
-
-          
+            <TabsContent value="performans" className="space-y-4 pt-4">
+              <Performans />
+            </TabsContent>
+          )}
+          {pathname.startsWith("/db") && (
+            <>
+            <TabsContent value="harita" className="space-y-4 pt-4">
+              <Harita />
+            </TabsContent>
+            <TabsContent value="baskanlikOzet" className="space-y-4 pt-4">
+              <BaskanlikOzet />
+            </TabsContent>
+            </>
+          )}
 
           <TabsContent value="bekleyen20" className="space-y-4 pt-4">
             <EskiBasvuruTablo />
