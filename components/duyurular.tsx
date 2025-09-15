@@ -120,7 +120,7 @@ const Duyurular = () => {
   return (
     <div id="duyurular" className="w-full">
       <div className="grid grid-cols-2 gap-1  ">
-        <Card className="col-span-2 h-[400px] gap-2 pb-0 ">
+        <Card className="col-span-2 h-[400px] xl:h-[450px] gap-2 pb-0 ">
           <CardHeader>
             <CardTitle>Duyurular</CardTitle>
             <CardDescription>
@@ -129,8 +129,8 @@ const Duyurular = () => {
           </CardHeader>
           <CardContent className="pl-2 pb-0  ">
             <div className="flex-1 overflow-auto ">
-              <div className="max-w-4xl xl:max-w-7xl mx-auto px-3 ">
-                <div className=" rounded-lg  bg-background overflow-y-scroll max-h-[300px]">
+              <div className="max-w-4xl xl:max-w-full mx-auto px-3 ">
+                <div className=" rounded-lg  bg-background overflow-y-scroll max-h-[300px] xl:max-h-[350px]">
                   <table className="w-full  ">
                     <thead className="bg-muted border-b border-border sticky top-0 left-0 border-collapse">
                       <tr>

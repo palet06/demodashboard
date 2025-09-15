@@ -138,7 +138,7 @@ export default function Notlar() {
   const standartYukseklik = "h-[340px]" 
   return (
     <div className={`bg-white dark:bg-[#0F0F12] rounded-xl p-6 border border-gray-200 dark:border-[#1F1F23] ${pathname ==="/uzman-v2"?'h-full':standartYukseklik}
-  flex flex-col shadow-sm`}>
+  flex flex-col shadow-sm `}>
       <div className="flex items-center justify-between mb-4">
         <h3 className="font-semibold text-gray-900 dark:text-white">
           Notlarım

@@ -41,7 +41,7 @@ export default function RootLayout({
           <AppSidebar />
           <SidebarInset className="p-0 m-0 bg-gray-50">
            
-            <div className="flex flex-1 flex-col p-6 pt-0 pb-0 ">
+            <div id="layout" className="flex flex-1 flex-col p-6 pt-0 pb-0 ">
               {children}
             </div>
           </SidebarInset>        

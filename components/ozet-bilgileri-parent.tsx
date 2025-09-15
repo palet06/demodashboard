@@ -16,6 +16,7 @@ import Notlar from "./notlar";
 import Link from "next/link";
 import Harita from "./Harita";
 import BaskanlikOzet from "./baskanlik-ozet";
+import GmTabloOzet from "./gmtablo";
 
 export default function OzetBilgileriParent() {
   const pathname = usePathname();
@@ -27,7 +28,7 @@ export default function OzetBilgileriParent() {
     setStatusMessage("PDF Oluşturuluyor...");
 
     try {
-      await generatePDF("v3", "uzman-ozet.pdf");
+      await generatePDF("layout", "uzman-ozet.pdf");
       setStatusMessage("PDF başarı ile oluşturuldu!");
 
       // Clear success message after 3 seconds
@@ -49,7 +50,7 @@ export default function OzetBilgileriParent() {
 
   
   return (
-    <Card className="col-span-2">
+    <Card className="col-span-2 ">
       <CardHeader className="">
         <div className="flex items-center justify-between">
           <div>
@@ -59,9 +60,7 @@ export default function OzetBilgileriParent() {
                 Özet Bilgileriniz
               </CardTitle>
             </div>
-            {/* <CardDescription className="text-base">
-              Comparative analysis of BPO and Digital Marketing sectors in Cagayan de Oro City
-            </CardDescription> */}
+          
           </div>
           <div className="flex flex-col items-end">
             <Button
@@ -114,6 +113,17 @@ export default function OzetBilgileriParent() {
               </>
             )}
 
+            {pathname.startsWith("/gm") && (
+              <>
+              <TabsTrigger className="cursor-pointer" value="harita">
+                İzin Haritası
+              </TabsTrigger>
+              <TabsTrigger className="cursor-pointer" value="gmozet">
+                Genel Müdürlük Özet
+              </TabsTrigger>
+              </>
+            )}
+
             <TabsTrigger className="cursor-pointer" value="bekleyen20">
               Bekleyen Son 20 Başvuru
             </TabsTrigger>
@@ -141,6 +151,17 @@ export default function OzetBilgileriParent() {
             </TabsContent>
             <TabsContent value="baskanlikOzet" className="space-y-4 pt-4">
               <BaskanlikOzet />
+            </TabsContent>
+            </>
+          )}
+
+          {pathname.startsWith("/gm") && (
+            <>
+            <TabsContent value="harita" className="space-y-4 pt-4">
+              <Harita />
+            </TabsContent>
+            <TabsContent value="gmozet" className="space-y-4 pt-4">
+              <GmTabloOzet />
             </TabsContent>
             </>
           )}

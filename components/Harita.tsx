@@ -339,7 +339,7 @@ const Harita = () => {
   return (
     <div id="harita" className="w-full bg-white">
       <div className="grid grid-cols-1 gap-1  ">
-        <Card className="col-span-1 h-[400px] gap-2 pb-0 ">
+        <Card className="col-span-1 h-[400px] xl:h-[500px] gap-2 pb-0 ">
           <CardHeader>
             <CardTitle>Verilen İzinler Ve Başvuru Haritası</CardTitle>
             <CardDescription></CardDescription>
@@ -347,7 +347,7 @@ const Harita = () => {
           <CardContent className="pl-2 pb-0  ">
             <div className="flex-1 overflow-hidden ">
               <div className="max-w-4xl xl:max-w-7xl mx-auto px-3 ">
-                <div className=" rounded-lg  bg-background max-h-[300px] relative">
+                <div className=" rounded-lg  bg-background max-h-[300px] xl:max-h-[400px] relative">
                   <button
                     className="absolute cursor-pointer top-4 right-4 z-20 px-4 py-2 text-blue-500 rounded hover:text-blue-900"
                     onClick={() =>
@@ -360,9 +360,10 @@ const Harita = () => {
                   </button>
 
                   <div
+                  className="h-[320px] xl:h-[420px]"
                     style={{
                       width: "100%",
-                      height: 320,
+                      
                       maxWidth: 1000,
                       margin: "0 auto",
                     }}

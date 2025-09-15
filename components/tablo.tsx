@@ -193,6 +193,7 @@ const personelListesi = [
   },
 ];
 
+
 export default function BaskanlikTablo() {
   const [selectedTab, setSelectedTab] = useState("personel");
   const [mode, setMode] = useState<"tablo" | "grafik">("tablo");
@@ -230,19 +231,18 @@ export default function BaskanlikTablo() {
     }
   });
 
- 
   return (
-    <Tabs defaultValue="personel"  value={selectedTab}
-  onValueChange={(val) => setSelectedTab(val)}>
+    <Tabs
+      defaultValue="personel"
+      value={selectedTab}
+      onValueChange={(val) => setSelectedTab(val)}
+    >
       <TabsList className="grid w-full grid-cols-2">
         <TabsTrigger className="cursor-pointer" value="personel">
           Personel Bazlı
         </TabsTrigger>
-        <TabsTrigger  className="cursor-pointer flex relative" value="sube">
+        <TabsTrigger className="cursor-pointer flex relative" value="sube">
           Şube Bazlı
-
-         
-         
         </TabsTrigger>
       </TabsList>
 
@@ -260,7 +260,6 @@ export default function BaskanlikTablo() {
             </TableRow>
           </TableHeader>
           <TableBody>
-          
             {personelListesi.map((personel) => (
               <TableRow
                 key={personel.id}
@@ -332,13 +331,7 @@ export default function BaskanlikTablo() {
       </TabsContent>
 
       {mode === "tablo" ? (
-    
-        
-         
-          
-         
         <TabsContent value="sube">
-           
           <Table>
             <TableHeader className="border-b border-border bg-muted hover:bg-muted/30 transition-colors">
               <TableRow>
@@ -411,61 +404,57 @@ export default function BaskanlikTablo() {
               ))}
             </TableBody>
           </Table>
-           
-          
         </TabsContent>
-        
       ) : (
-       
-        <div>
-            
-             
-          <h3 className="font-medium text-lg mb-3">Şube Grafik</h3>
-          <div className="h-[300px]">
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart
-                data={grafikData}
-                margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-              >
-                <CartesianGrid strokeDasharray="1 1" />
-                <XAxis dataKey="subeAdi" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Bar
-                  dataKey="adananDs"
-                  name="Atanan dosya sayısı"
-                  fill="#0088FE"
-                  label={{ position: "center", fill: "#fff", fontSize: 12 }}
-                />
-                <Bar
-                  dataKey="degerlendirilenDs"
-                  name="Değerlendirilen dosya sayısı"
-                  fill="#FFBB28"
-                  label={{ position: "center", fill: "#fff", fontSize: 12 }}
-                
-                />
-                <Bar
-                  dataKey="sonuclananDs"
-                  name="Sonuçlanan dosya sayısı"
-                  fill="#00C49F"
-                  label={{ position: "center", fill: "#fff", fontSize: 12 }}
-                />
-              </BarChart>
-            </ResponsiveContainer>
+        selectedTab === "sube" && (
+          <div>
+            <h3 className="font-medium text-lg mb-3">Şube Grafik</h3>
+            <div className="h-[300px]">
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart
+                  data={grafikData}
+                  margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+                >
+                  <CartesianGrid strokeDasharray="1 1" />
+                  <XAxis dataKey="subeAdi" />
+                  <YAxis />
+                  <Tooltip />
+                  <Legend />
+                  <Bar
+                    dataKey="adananDs"
+                    name="Atanan dosya sayısı"
+                    fill="#0088FE"
+                    label={{ position: "center", fill: "#fff", fontSize: 12 }}
+                  />
+                  <Bar
+                    dataKey="degerlendirilenDs"
+                    name="Değerlendirilen dosya sayısı"
+                    fill="#FFBB28"
+                    label={{ position: "center", fill: "#fff", fontSize: 12 }}
+                  />
+                  <Bar
+                    dataKey="sonuclananDs"
+                    name="Sonuçlanan dosya sayısı"
+                    fill="#00C49F"
+                    label={{ position: "center", fill: "#fff", fontSize: 12 }}
+                  />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
           </div>
-        </div>
+        )
       )}
-      <button 
-              className="cursor-pointer  text-blue-500 rounded hover:text-blue-900"
-              onClick={() =>
-                setMode((prev) => (prev === "tablo" ? "grafik" : "tablo"))
-            }
-            >
-              {mode === "tablo" ? "Grafik Göster" : "Tablo Göster"}
-            </button>
-     
-     
+
+      {selectedTab === "sube" && (
+        <button
+          className="cursor-pointer  text-blue-500 rounded hover:text-blue-900"
+          onClick={() =>
+            setMode((prev) => (prev === "tablo" ? "grafik" : "tablo"))
+          }
+        >
+          {mode === "tablo" ? "Grafik Göster" : "Tablo Göster"}
+        </button>
+      )}
     </Tabs>
   );
 }
