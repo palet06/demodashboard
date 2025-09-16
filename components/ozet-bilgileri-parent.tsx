@@ -125,9 +125,9 @@ export default function OzetBilgileriParent() {
             )}
 
             <TabsTrigger className="cursor-pointer" value="bekleyen20">
-              Bekleyen Son 20 Başvuru
+              Bekleyen En Eski 20 Başvuru
             </TabsTrigger>
-            <TabsTrigger className="cursor-pointer" value="notlar">
+            <TabsTrigger className="cursor-pointer" value="notlarim">
               Notlarım
             </TabsTrigger>
             <TabsTrigger className="cursor-pointer" value="linkler">
@@ -170,7 +170,7 @@ export default function OzetBilgileriParent() {
             <EskiBasvuruTablo />
           </TabsContent>
 
-          <TabsContent value="notlar" className="space-y-4 pt-4">
+          <TabsContent value="notlarim" className="space-y-4 pt-4">
             <Notlar />
           </TabsContent>
 

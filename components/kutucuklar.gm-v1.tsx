@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import {  WatchIcon, Recycle, DollarSign, X } from "lucide-react"
 
-export default function KutucuklarDbV1() {
+export default function KutucuklarGmV1() {
   return (
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-6">
       <Card className="cursor-pointer hover:shadow-xl transition-shadow ">
@@ -35,7 +35,7 @@ export default function KutucuklarDbV1() {
       </Card>
       <Card className="cursor-pointer hover:shadow-xl transition-shadow">
         <CardHeader className="flex flex-row items-start justify-between space-y-0 pb-2">
-          <CardTitle className="text-sm font-medium">Harçtan Ret Bekleyen Başvuru Sayısı</CardTitle>
+          <CardTitle className="text-sm font-medium">Tekrar Değerlendirilecek Onay Bekleyen Başvurular</CardTitle>
           <DollarSign className="h-4 w-4 text-muted-foreground" />
         </CardHeader>
         <CardContent className="flex flex-col justify-end items-center h-full">
@@ -61,7 +61,7 @@ export default function KutucuklarDbV1() {
       </Card>
       <Card className="cursor-pointer hover:shadow-xl transition-shadow">
         <CardHeader className="flex flex-row items-start justify-between space-y-0 pb-2">
-          <CardTitle className="text-sm font-medium">Başkanlıkta İşlem Görmeyen Dosya Sayısı</CardTitle>
+          <CardTitle className="text-sm font-medium">Genel Müdürlük İşlem Görmeyen Dosya Sayısı</CardTitle>
           <X className="h-4 w-4 text-muted-foreground" />
         </CardHeader>
         <CardContent className="flex flex-col justify-end items-center h-full">

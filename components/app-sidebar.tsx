@@ -23,8 +23,17 @@ import {
   SidebarContent,
   SidebarFooter,
   
+  SidebarHeader,
+  
+  SidebarMenu,
+  
+  SidebarMenuButton,
+  
+  SidebarMenuItem,
+  
   SidebarRail,
 } from "@/components/ui/sidebar"
+import Link from "next/link"
 
 // This is sample data.
 const data = {
@@ -59,12 +68,9 @@ const data = {
       items: [
         {
           title: "V1",
-          url: "/sm-v1",
+          url: "#",
         },
-        {
-          title: "V2",
-          url: "/sm-v2",
-        },
+        
        
       ],
     },
@@ -77,10 +83,7 @@ const data = {
           title: "V1",
           url: "/db-v1",
         },
-        {
-          title: "V2",
-          url: "/db-v2",
-        },
+        
         
       ],
     },
@@ -93,10 +96,7 @@ const data = {
           title: "V1",
           url: "/gm-v1",
         },
-        {
-          title: "V2",
-          url: "/gm-v2",
-        },
+       
        
       ],
     },
@@ -107,6 +107,21 @@ const data = {
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
+      <SidebarHeader>
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <SidebarMenuButton size="lg" asChild>
+              <Link href="/">
+                <div className="flex aspect-square  items-center justify-center rounded-lg">
+                  <img src="logo-gri.svg"  />
+                </div>
+                
+              </Link>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        </SidebarMenu>
+
+      </SidebarHeader>
      
       <SidebarContent>
         <NavMain items={data.navMain} />

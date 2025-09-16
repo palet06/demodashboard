@@ -28,7 +28,7 @@ const priorityColors = {
 
 export default function Notlar() {
     const pathname = usePathname();
-  const [notes, setNotes] = useState<Note[]>([]);
+  const [notlar, setNotlar] = useState<Note[]>([]);
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
   const [isDetailDialogOpen, setIsDetailDialogOpen] = useState(false);
   const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
@@ -41,19 +41,19 @@ export default function Notlar() {
   });
 
   useEffect(() => {
-    const savedNotes = localStorage.getItem("dashboard-notes");
-    if (savedNotes) {
+    const savednotlar = localStorage.getItem("dashboard-notlar");
+    if (savednotlar) {
       try {
-        setNotes(JSON.parse(savedNotes));
+        setNotlar(JSON.parse(savednotlar));
       } catch (error) {
-        console.error("Error loading notes from localStorage:", error);
+        console.error("Error loading notlar from localStorage:", error);
       }
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("dashboard-notes", JSON.stringify(notes));
-  }, [notes]);
+    localStorage.setItem("dashboard-notlar", JSON.stringify(notlar));
+  }, [notlar]);
 
   const handleAddNote = () => {
     if (!formData.title.trim() || !formData.content.trim()) return;
@@ -67,7 +67,7 @@ export default function Notlar() {
       updatedAt: new Date().toISOString(),
     };
 
-    setNotes((prev) => [newNote, ...prev]);
+    setNotlar((prev) => [newNote, ...prev]);
     setFormData({ title: "", content: "", priority: "normal" });
     setIsAddDialogOpen(false);
   };
@@ -84,7 +84,7 @@ export default function Notlar() {
       updatedAt: new Date().toISOString(),
     };
 
-    setNotes((prev) =>
+    setNotlar((prev) =>
       prev.map((note) => (note.id === selectedNote.id ? updatedNote : note))
     );
     setFormData({ title: "", content: "", priority: "normal" });
@@ -96,7 +96,7 @@ export default function Notlar() {
   const handleDeleteNote = () => {
     if (!selectedNote) return;
 
-    setNotes((prev) => prev.filter((note) => note.id !== selectedNote.id));
+    setNotlar((prev) => prev.filter((note) => note.id !== selectedNote.id));
     setIsDeleteDialogOpen(false);
     setIsDetailDialogOpen(false);
     setSelectedNote(null);
@@ -230,7 +230,7 @@ export default function Notlar() {
 
       <div className="flex flex-col justify-between h-full overflow-y-auto">
         <div className="space-y-3  flex flex-col w-full  h-full">
-        {notes.length === 0 ? (
+        {notlar.length === 0 ? (
           <div className="text-center py-8 flex flex-col h-full items-center justify-center">
             <StickyNote className="h-12 w-12 text-gray-400 mx-auto mb-3" />
             <p className="text-gray-500 dark:text-gray-400">
@@ -241,7 +241,7 @@ export default function Notlar() {
             </p>
           </div>
         ) : (
-          notes.map((note) => (
+          notlar.map((note) => (
             <div
               key={note.id}
               onClick={() => handleNoteClick(note)}
@@ -275,16 +275,16 @@ export default function Notlar() {
           ))
         )}
       </div>
-      {notes.length > 0 && (
+      {notlar.length > 0 && (
         <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700 sticky bottom-0 bg-white">
           <div className="flex justify-between items-center text-sm">
             <span className="text-gray-600 dark:text-gray-400">Toplam Not</span>
             <div className="flex items-center gap-4">
               <span className="text-xs text-gray-500">
-                Önemli: {notes.filter((n) => n.priority === "important").length}
+                Önemli: {notlar.filter((n) => n.priority === "important").length}
               </span>
               <span className="font-medium text-gray-900 dark:text-white">
-                {notes.length}
+                {notlar.length}
               </span>
             </div>
           </div>
