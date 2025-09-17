@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import {  Users,  Clock,  WatchIcon, Recycle, DollarSign, X } from "lucide-react"
+import {   WatchIcon, Recycle, DollarSign, X } from "lucide-react"
 
 export default function Kutucuklar() {
   return (

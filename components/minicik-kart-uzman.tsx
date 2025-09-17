@@ -9,7 +9,7 @@ const MinicikKartUzman = () => {
   console.log(pathname)
   return (
     <div className="mb-4">
-      {/* Quick Action Cards */}
+      
       <div className={`${pathname ==='/uzman-v2'?'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-1 p':standartGridClaslari}`}>
         <Card className="p-6 hover:shadow-md transition-shadow cursor-pointer border-gray-200">
           <div className="flex items-center gap-4">

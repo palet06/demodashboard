@@ -329,7 +329,7 @@ const Harita = () => {
         g.attr("transform", event.transform.toString());
       });
 
-    svg.call(zoomBehavior);
+    (svg as any).call(zoomBehavior);
 
     return () => {
       svg.on(".zoom", null);

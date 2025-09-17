@@ -81,7 +81,7 @@ export default function GmTablo() {
           <CardContent className="pl-2 pb-0  ">
             <div className="flex-1 overflow-auto ">
               <div className="max-w-4xl xl:max-w-full mx-auto px-3 ">
-                <div className=" rounded-lg  bg-background overflow-y-scroll max-h-[300px] xl:max-h-[350px]">
+                <div className=" rounded-lg  bg-background  max-h-[300px] xl:max-h-[350px]">
                   <Tabs
                     defaultValue="personel"
                     value={selectedTab}

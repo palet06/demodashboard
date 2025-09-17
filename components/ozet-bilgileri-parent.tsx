@@ -28,10 +28,10 @@ export default function OzetBilgileriParent() {
     setStatusMessage("PDF Oluşturuluyor...");
 
     try {
-      await generatePDF("layout", "uzman-ozet.pdf");
+      await generatePDF("layout", "dashboard-ozet.pdf");
       setStatusMessage("PDF başarı ile oluşturuldu!");
 
-      // Clear success message after 3 seconds
+      
       setTimeout(() => {
         setStatusMessage("");
       }, 3000);
@@ -39,7 +39,7 @@ export default function OzetBilgileriParent() {
       console.error("PDF Oluşturulurken hata oluştu.:", error);
       setStatusMessage("Hata oluştu. Lütfen tekrar deneyin.");
 
-      // Clear error message after 3 seconds
+      
       setTimeout(() => {
         setStatusMessage("");
       }, 3000);
