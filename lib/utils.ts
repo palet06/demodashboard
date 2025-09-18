@@ -6,7 +6,7 @@ import html2canvas from 'html2canvas';
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
- function prepareForHtml2Canvas(element) {
+ function prepareForHtml2Canvas(element: HTMLElement) {
   
   const originalStyles = new Map();
   
@@ -20,15 +20,19 @@ export function cn(...inputs: ClassValue[]) {
     if (color.includes('color(') || backgroundColor.includes('color(')) {
       
       originalStyles.set(el, {
+        // @ts-expect-error
         color: el.style.color,
+        // @ts-expect-error
         backgroundColor: el.style.backgroundColor
       });
       
    
       if (color.includes('color(')) {
+        // @ts-expect-error
         el.style.color = 'rgb(128, 128, 128)'; 
       }
       if (backgroundColor.includes('color(')) {
+        // @ts-expect-error
         el.style.backgroundColor = 'rgb(240, 240, 240)'; 
       }
     }
@@ -37,9 +41,13 @@ export function cn(...inputs: ClassValue[]) {
   return originalStyles;
 }
 
-async function restoreStyles(originalStyles) {
+async function restoreStyles(
+  originalStyles: Map<Element, { color: string; backgroundColor: string }>
+) {
   originalStyles.forEach((styles, element) => {
+    // @ts-expect-error
     if (styles.color) element.style.color = styles.color;
+    // @ts-expect-error
     if (styles.backgroundColor) element.style.backgroundColor = styles.backgroundColor;
   });
 }
@@ -57,7 +65,7 @@ export const generatePDF = async (elementId: string, filename = "report.pdf"): P
 
 
 
-    
+     
      const originalStyles=  prepareForHtml2Canvas(element);
     const canvas = await html2canvas(element, {
     
